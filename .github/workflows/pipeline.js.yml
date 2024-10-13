@@ -26,6 +26,6 @@ jobs:
     - name: Install PlayWright
       run: npx playwright install 
     - name: Start the application
-      run: npm run start  
+      run: npm run start & 
     - name: Start UI Tests
       run: npm run test:ui    
