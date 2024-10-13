@@ -23,3 +23,7 @@ jobs:
       run: npm install
     - name: Start Unit Tests
       run: npm run test:unit
+    - name: Install PlayWright
+      run: npx playwright install 
+    - name: Start UI Tests
+      run: test:ui    
