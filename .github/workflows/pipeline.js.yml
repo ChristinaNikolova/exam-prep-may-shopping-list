@@ -28,4 +28,13 @@ jobs:
     - name: Start the application
       run: npm run start & 
     - name: Start UI Tests
-      run: npm run test:ui    
+      run: npm run test:ui   
+      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: JorgeLNJunior/render-deploy@v1.4.4
+        with:
+          service_id: ${{ secrets.RENDER_SERVICE_ID }}
+          api_key: ${{ secrets.RENDER_API_KEY }}
+          wait_deploy: true 
