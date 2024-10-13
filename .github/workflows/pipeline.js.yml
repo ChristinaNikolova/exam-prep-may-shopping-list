@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
     - name: Print Softuni username
@@ -26,4 +26,4 @@ jobs:
     - name: Install PlayWright
       run: npx playwright install 
     - name: Start UI Tests
-      run: npm test:ui    
+      run: npm run test:ui    
